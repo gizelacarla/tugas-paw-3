@@ -1,0 +1,281 @@
+:root {
+    --main-color : #ffd95c;
+    --main-color-hover : #e6c34f;
+    --dark-color : #2b2b2b;
+    --abu-color : #f0f0f0;
+    --merah-color : #e74c3c;
+    --container-width : 900px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--abu-color);
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    font-size: 2rem;
+}
+
+.button {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 1.3em;
+    padding: 0.7em 1.2em;
+    background-color: var(--main-color);
+    color: #464646;
+    border: none;
+    border-radius: 30px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: var(--main-color-hover);
+    color: #2e2a2a;
+    transition: all 0.3s;
+}
+
+/* HEADER */
+.header-container {
+    background-color: var(--dark-color);
+    color: white;
+    padding: 0 10%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
+
+.header-container span {
+    color: var(--main-color);
+}
+/* END OF HEADER */
+
+/* MAIN */
+.main-container {
+    max-width: var(--container-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.main-container hr {
+    border: 0;
+    border-top: 1px solid #ddd;
+    margin: 1rem 0 2rem;
+}
+
+.kalkulator-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+/* END OF MAIN */
+
+/* KALKULATOR */
+.kalkulator {
+    width: 60%;
+    background-color: var(--dark-color);
+    padding: 1.2rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.layar-container {
+    background-color: #1a1a1a;
+    color: white;
+    text-align: right;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.5rem;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+.ekspresi {
+    color: #999;
+    font-size: 1.1rem;
+    min-height: 1.5rem;
+}
+
+.layar {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 0.3rem;
+    word-wrap: break-word;
+}
+
+.layar.kecil {
+    font-size: 1.8rem;
+}
+
+.layar.error {
+    color: var(--merah-color);
+    font-size: 1.6rem;
+}
+
+.keypad {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.tombol {
+    width: 23%;
+    height: 65px;
+    margin-bottom: 0.7rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: #4a4a4a;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+.tombol:hover {
+    background-color: #666;
+    transition: all 0.3s;
+}
+
+.tombol:active {
+    transform: scale(0.95);
+}
+
+.tombol.fungsi {
+    background-color: #a5a5a5;
+    color: #1a1a1a;
+}
+
+.tombol.fungsi:hover {
+    background-color: #c4c4c4;
+}
+
+.tombol.operator {
+    background-color: var(--main-color);
+    color: #464646;
+    font-weight: bold;
+}
+
+.tombol.operator:hover {
+    background-color: var(--main-color-hover);
+}
+
+.tombol.operator.aktif {
+    background-color: white;
+}
+
+.tombol.sama {
+    background-color: #27ae60;
+}
+
+.tombol.sama:hover {
+    background-color: #1e8e4f;
+}
+/* END OF KALKULATOR */
+
+/* RIWAYAT */
+.riwayat {
+    width: 37%;
+    background-color: white;
+    padding: 1rem 1.2rem 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 1rem;
+}
+
+.riwayat h2 {
+    margin: 0;
+}
+
+.riwayat hr {
+    margin: 0.7rem 0;
+}
+
+.riwayat ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    max-height: 340px;
+    overflow-y: auto;
+}
+
+.riwayat li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+    text-align: right;
+    word-wrap: break-word;
+}
+
+.riwayat li small {
+    display: block;
+    color: #999;
+}
+
+.riwayat li.kosong {
+    text-align: center;
+    color: #999;
+}
+/* END OF RIWAYAT */
+
+/* FOOTER */
+.footer-container {
+    margin-top: 3rem;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 1.5rem 1rem;
+    text-align: center;
+}
+
+.footer-container hr {
+    display: none;
+}
+
+.footer-container p {
+    margin: 0.5rem 0 0;
+}
+/* END OF FOOTER */
+
+/* BREAKPOINT TABLET */
+@media screen and (max-width: 768px) {
+    .header-container {
+        padding: 0 1rem;
+    }
+
+    .kalkulator, .riwayat {
+        width: 100%;
+    }
+
+    .riwayat {
+        margin-top: 1.5rem;
+    }
+}
+
+/* BREAKPOINT HANDPHONE */
+@media screen and (max-width: 481px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .header-container span {
+        display: none;
+    }
+
+    .layar {
+        font-size: 2.2rem;
+    }
+
+    .tombol {
+        height: 55px;
+        font-size: 1.2rem;
+    }
+}

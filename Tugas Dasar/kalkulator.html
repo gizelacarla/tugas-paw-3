@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Nama Kamu">
+    <meta name="description" content="Tugas praktikum modul 3: Aplikasi Kalkulator dengan HTML, CSS dan Javascript">
+    <meta name="robots" content="index, follow">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <title>Aplikasi Kalkulator</title>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header-container">
+        <strong>Pemrograman Aplikasi Web</strong>
+        <span>Tugas Javascript Dasar</span>
+    </header>
+
+    <!-- Main -->
+    <main class="main-container">
+        <h1>Aplikasi Kalkulator</h1>
+        <hr>
+
+        <div class="kalkulator-wrapper">
+
+            <!-- Kalkulator -->
+            <section class="kalkulator">
+                <div class="layar-container">
+                    <div class="ekspresi" id="ekspresi">&nbsp;</div>
+                    <div class="layar" id="layar">0</div>
+                </div>
+
+                <div class="keypad">
+                    <button class="tombol fungsi" data-tipe="hapus-semua">C</button>
+                    <button class="tombol fungsi" data-tipe="hapus-satu">DEL</button>
+                    <button class="tombol fungsi" data-tipe="persen">%</button>
+                    <button class="tombol operator" data-tipe="operator" data-nilai="/">&divide;</button>
+
+                    <button class="tombol" data-tipe="angka" data-nilai="7">7</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="8">8</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="9">9</button>
+                    <button class="tombol operator" data-tipe="operator" data-nilai="*">&times;</button>
+
+                    <button class="tombol" data-tipe="angka" data-nilai="4">4</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="5">5</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="6">6</button>
+                    <button class="tombol operator" data-tipe="operator" data-nilai="-">&minus;</button>
+
+                    <button class="tombol" data-tipe="angka" data-nilai="1">1</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="2">2</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="3">3</button>
+                    <button class="tombol operator" data-tipe="operator" data-nilai="+">+</button>
+
+                    <button class="tombol" data-tipe="ubah-tanda">+/&minus;</button>
+                    <button class="tombol" data-tipe="angka" data-nilai="0">0</button>
+                    <button class="tombol" data-tipe="titik">.</button>
+                    <button class="tombol sama" data-tipe="sama">=</button>
+                </div>
+            </section>
+
+            <!-- Riwayat -->
+            <aside class="riwayat">
+                <h2>Riwayat</h2>
+                <hr>
+                <ul id="daftarRiwayat">
+                    <li class="kosong">Belum ada perhitungan</li>
+                </ul>
+                <button class="button" id="hapusRiwayat">Hapus Riwayat</button>
+            </aside>
+
+        </div>
+
+        <noscript>
+            <h2>JavaScript tidak aktif, mohon diaktifkan untuk bisa menggunakan kalkulator ini</h2>
+        </noscript>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer-container">
+        <hr>
+        <strong>Sistem Informasi Telkom University Surabaya</strong>
+        <p><small>&copy; Gizela Carla - 108052500126 - IS0802 - 2026</small></p>
+    </footer>
+
+    <!-- External Script -->
+    <script src="assets/script.js"></script>
+</body>
+</html>
